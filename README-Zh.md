@@ -1,18 +1,18 @@
 renders
 =======
 
-New template render of macaron framework
+Macaron框架一款新的模板渲染中间件
 
-Macaron middleware/handler for rendering serialized JSON, XML, and HTML template responses.
+Macaron 中间件处理器 渲染序列化的XML，JSON和HTML模板
 
-## Installation
+## 安装
 ```go get github.com/macaron-contrib/renders```
 
-## Examples
-Check out the [examples](https://github.com/macaron-contrib/renders/tree/master/examples) folder for some examples
+## 例子
+浏览 [examples](https://github.com/macaron-contrib/renders/tree/master/examples) 目录中有一些简单的例子
 
 ## Usage
-render uses Go's [html/template](http://golang.org/pkg/html/template/) package to render html templates.
+使用 Go's [html/template](http://golang.org/pkg/html/template/) 包. 
 
 ~~~ go
 // main.go
@@ -52,8 +52,8 @@ func main() {
 ~~~
 
 
-### Options
-`renders.Renderer` comes with a variety of configuration options:
+### 配置选项
+`renders.Renderer` 包含多种配置选项:
 
 ~~~ go
 // ...
@@ -70,8 +70,8 @@ m.Use(renders.Renderer(renders.Options{
 ~~~
 
 ### Extends
-Just use the standard template keyword with a *.html file path.
-REMEMBER to pass the context to the parent template with the trailing dot (. }}).
+使用标准模板与关键字， HTML文件的路径。
+记得要通过上下文和尾随"."到模板中 (.}})。
 
 index.html
 	
@@ -81,20 +81,21 @@ index.html
 	    content of index to be inserted into the fullwidth template
 	{{ end }}
 
-This will also work with multi-level support, e.g. 
+支持多层次的联接，如：
 ```index.html ---extends---> layouts/fullwidth.html ---extends---> base.html```
 
 ### Include
-Automatically parse the right file just by writing the path to it
+自动解析正确的文件路径 (这个是Macaron中没有的)
 
     {{ define "content" }}
         content of the fullwidth template
         {{ template "includes/widgets/signup.html" . }}
     {{ end }}
 
-### Overwriting define / default value
-Any "define" of the same "template" down the extend chain will overwrite the former content
-This can be used to define default values for a {{ template }} like so
+### 覆盖 define / default value
+
+任何"define"在"template"下的扩展将覆盖以前的内容
+还可以用来在{{ template }}中，定义默认值 
 
 base.html
 
@@ -112,7 +113,6 @@ profile.html
     {{ template "templates/base.html" . }}
     {{ define "title" }}Hello World{{ end }}
 
-This would produce panic in std lib parsing but now it works by simply renaming the define's further down the chain not to interrupt the most specific one.
 
 
 ## Authors
