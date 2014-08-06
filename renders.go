@@ -99,7 +99,8 @@ func loadTemplates(funcMap template.FuncMap) (map[string]*template.Template, err
 						currentTmpl = baseTmpl.New(nt.Name)
 					}
 
-					template.Must(currentTmpl.Funcs(funcMap).Parse(nt.Src))
+					err := template.Must(currentTmpl.Funcs(funcMap).Parse(nt.Src))
+					return err
 					i++
 				}
 				tname := generateTemplateName(basePath, path)
