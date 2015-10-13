@@ -8,8 +8,8 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/Unknwon/macaron"
 	"github.com/oxtoacart/bpool"
+	"gopkg.in/macaron.v1"
 )
 
 const (
