@@ -6,10 +6,10 @@ Macaron框架一款新的模板渲染中间件
 Macaron 中间件处理器 渲染序列化的XML，JSON和HTML模板
 
 ## 安装
-```go get github.com/macaron-contrib/renders```
+```go get github.com/go-macaron/renders```
 
 ## 例子
-浏览 [examples](https://github.com/macaron-contrib/renders/tree/master/examples) 目录中有一些简单的例子
+浏览 [examples](https://github.com/go-macaron/renders/tree/master/examples) 目录中有一些简单的例子
 
 ## Usage
 使用 Go's [html/template](http://golang.org/pkg/html/template/) 包. 
@@ -19,9 +19,9 @@ Macaron 中间件处理器 渲染序列化的XML，JSON和HTML模板
 package main
 
 import (
-	"github.com/Unknwon/macaron"
+	"gopkg.in/macaron.v1"
 
-	"github.com/macaron-contrib/renders"
+	"github.com/go-macaron/renders"
 )
 
 func main() {

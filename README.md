@@ -6,10 +6,10 @@ New template render of macaron framework
 Macaron middleware/handler for rendering serialized JSON, XML, and HTML template responses.
 
 ## Installation
-```go get github.com/macaron-contrib/renders```
+```go get github.com/go-macaron/renders```
 
 ## Examples
-Check out the [examples](https://github.com/macaron-contrib/renders/tree/master/examples) folder for some examples
+Check out the [examples](https://github.com/go-macaron/renders/tree/master/examples) folder for some examples
 
 ## Usage
 render uses Go's [html/template](http://golang.org/pkg/html/template/) package to render html templates.
@@ -19,9 +19,9 @@ render uses Go's [html/template](http://golang.org/pkg/html/template/) package t
 package main
 
 import (
-	"github.com/Unknwon/macaron"
+	"gopkg.in/macaron.v1"
 
-	"github.com/macaron-contrib/renders"
+	"github.com/go-macaron/renders"
 )
 
 func main() {
