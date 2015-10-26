@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/cnphpbb/renders"
+	"github.com/go-macaron/renders"
 )
 
 var templates map[string]*template.Template

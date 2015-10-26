@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/Unknwon/macaron"
+	"gopkg.in/macaron.v1"
 
-	"github.com/macaron-contrib/renders"
+	"github.com/go-macaron/renders"
 )
 
 func main() {
